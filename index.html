@@ -8,9 +8,39 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary modal-up" data-toggle="modal" data-target="#exampleModalCenter">
+      Game Rules
+    </button>
+      
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Game Rules - Pig Game</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>The game has 2 players, playing in rounds</li>
+              <li>In each turn, a player rolls a dice as many times as he whishes.<br>Each result get added to his ROUND score</li>
+              <li>BUT, if the player rolls a 1, all his ROUND score gets lost.<br>After that, it's the next player's turn</li>
+              <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score.<br>After that, it's the next player's turn</li>
+              <li>The first player to reach 100 points on GLOBAL score wins the game</li>
+            </ul>
+            PS: You can put another final score for the game. Just put it in the right field at the bottom ;)
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="wrapper clearfix">
       <div class="player-0-panel active">
         <div class="player-name" id="name-0">Player 1</div>
@@ -30,16 +60,19 @@
         </div>
       </div>
       
-      <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-      <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+      <button class="game-btn btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+      <button class="game-btn btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+      <button class="game-btn btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
       
-      <input type="text" placeholder="Final score" class="final-score">
+      <input type="number" placeholder="Final score" class="final-score" min="10" max="150">
 
       <img src="img/dice-5.png" alt="Dice" class="dice" id="dice-1">
       <img src="img/dice-5.png" alt="Dice" class="dice" id="dice-2">
     </div>
     
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
