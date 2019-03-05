@@ -136,7 +136,7 @@ body {
 .game-btn:hover { font-weight: 600; }
 .game-btn:hover i { margin-right: 20px; }
 
-button:focus {
+.game-btn:focus {
   outline: none;
 }
 
